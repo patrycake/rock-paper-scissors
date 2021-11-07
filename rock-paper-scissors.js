@@ -6,7 +6,7 @@ function computerPlay(){
 }
 
 function userPlay(){
-    userchoice = prompt("Rock Paper Scissors Shoot! Type your choice: ");
+    //userchoice = prompt("Rock Paper Scissors Shoot! Type your choice: ");
     if(userchoice == "rock"){ return 1;}
     if(userchoice == "paper"){return 2;}
     if(userchoice == "scissors"){return 3;}
