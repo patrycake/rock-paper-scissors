@@ -1,8 +1,12 @@
 var userChoiceImg = document.getElementById("user-choice");
 var computerChoiceImg = document.getElementById("computer-choice");
-var resultsH2 = document.getElementById("results-h2")
+var resultsH2 = document.getElementById("results-h2");
+var userScoreDom = document.getElementById("user-score");
+var computerScoreDom = document.getElementById("computer-score");
 
 var userChoice = "";
+var userScore = 0;
+var computerScore = 0;
 
 var rpsButtons = document.getElementsByClassName("far");
 Array.from(rpsButtons).forEach(rpsButton => {
@@ -74,13 +78,19 @@ function populateResultIcons() {
     if (computerChoice == 3) computerChoiceImg.classList.add("fa-hand-scissors")
 }
 
+function updateScore(score){
+    console.log(userScoreDom);
+    console.log(computerScoreDom)
+    if(score.playerWin) userScoreDom.innerText = ++userScore;
+    if(score.computerWin) computerScoreDom.innerText = ++computerScore;
+}
+
 function gameController() {
     computerChoice = computerPlay();
     userChoice = userPlay(userChoice);
     console.log("user: " + intToStringRps(userChoice) + " comp: " + intToStringRps(computerChoice))
     result = gameResult(computerChoice, userChoice);
     resultsH2.innerText = result.message;
+    updateScore(result);
     populateResultIcons();
-    // console.log(result);
-    // evaluate game play
 }
