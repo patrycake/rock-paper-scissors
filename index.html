@@ -5,9 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <script src="rock-paper-scissors.js" defer></script>-->
+    <script src="rock-paper-scissors.js" defer></script>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Quicksand:wght@300&display=swap"
+        rel="stylesheet">
     <title>Rock Paper Scissors</title>
 </head>
 
@@ -15,9 +19,37 @@
     <div class="background">
         <div class="container">
             <h1>Rock Paper Scissors</h1>
-            <i class="fas fa-hand-rock"></i>
-            <i class="fas fa-hand-paper"></i>
-            <i class="fas fa-hand-scissors"></i>
+
+            <div id="results">
+
+                <div>
+                    <h3>Your Score</h3>
+                </div>
+                <h2 id="results-h2">Click Rock, Paper or Scissors</h2>
+                <div>
+                    <h3>Computer Score</h3>
+                </div>
+            </div>
+            <div class="buttons">
+                <i id="rock" class="far fa-hand-rock"></i>
+                <i id="paper" class="far fa-hand-paper"></i>
+                <i id="scissors" class="far fa-hand-scissors"></i>
+                <!-- <i class="fas fa-hand-scissors"></i> -->
+            </div>
+            
+        </div>
+        <div class="resultImg">
+            <div class="user-results">
+                <p>You</p>
+
+                <div><i id="user-choice" class="fas"></i></div>
+            </div>
+            <p>VS</p>
+            <div class="computer-results">
+                <p>Computer</p>
+                <div><i id="computer-choice" class="fas"></i></div>
+
+            </div>
         </div>
     </div>
 
