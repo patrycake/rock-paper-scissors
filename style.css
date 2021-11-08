@@ -5,9 +5,10 @@ body {
     margin: 0;
 }
 
-p, h3{
+p,
+h3 {
     font-family: 'Quicksand', sans-serif;
-    color:#7e89ca;
+    color: #7e89ca;
     font-size: 1.5em;
 }
 
@@ -21,7 +22,7 @@ p, h3{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap:30px;
+    gap: 30px;
 }
 
 .container {
@@ -46,11 +47,20 @@ h2 {
     font-family: 'Fredoka One', cursive;
     color: #fddba0;
     font-size: 2em;
+    margin: 0 auto;
 }
+
+#results-h2 {
+    /* background-color: rgb(0, 0, 0, 0.1); */
+    border-radius: 15px;
+    border: 5px solid #fddba0;
+}
+
 .buttons {
     margin: auto;
     font-size: 1.5em;
 }
+
 .fas,
 .far {
 
@@ -64,25 +74,34 @@ h2 {
 
 }
 
-#results{
-   /* margin: auto 0;*/
+#results {
     display: flex;
-    justify-content: space-around;
-    
-
+    justify-content: center;
+    gap: 30px;
+    align-items: center;
 }
 
-.resultImg{
+#results>* {
+    flex: 1;
+}
+
+.resultImg {
     width: 90%;
     /* margin: auto 0 0 0; */
     display: flex;
-    justify-content: space-evenly;
-    align-items: flex-end;
+    justify-content: space-between;
+    align-items: center;
     border-radius: 15px;
     background-color: white;
     box-shadow: 0px 0px 30px 30px rgb(0, 0, 0, 0.1);
-    margin: 20px;;
+    /* margin: 20px; */
+    text-align: center;
 }
 
-.results{
+.resultImg>* {
+    flex: 1;
+}
+
+.user-results {
+    text-align: center;
 }
